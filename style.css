@@ -112,56 +112,53 @@ body {
 
   display: grid;
   gap: 1.5rem;
-
-  .avatar {
-    justify-self: center;
-    width: 5.5rem;
-    height: 5.5rem;
-
-    img {
-      border-radius: 100%;
-    }
-  }
-
-  .card__user {
-    .card__name {
-      font-size: var(--fs-24);
-      font-weight: var(--fw-semi-bold);
-      margin-bottom: 4px;
-    }
-
-    .card__location {
-      color: var(--clr-green);
-    }
-  }
-
-  .card__btn {
-    display: grid;
-    gap: 16px;
-
-    button {
-      background-color: var(--clr-grey-700);
-      color: var(--clr-White);
-      border-radius: 8px;
-      font-size: inherit;
-      font-weight: var(--fw-bold);
-      height: 45px;
-      padding: 0.75rem;
-      transition: 300ms ease-in-out;
-    }
-
-    button:hover {
-      background-color: var(--clr-green);
-      color: var(--clr-grey-700);
-    }
-
-    button:focus {
-      outline: 1px solid var(--clr-green);
-      color: var(--clr-green);
-    }
-  }
 }
 
+/* Image Avatar */
+.avatar {
+  justify-self: center;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.avatar > img {
+  border-radius: 100%;
+}
+
+/* Name and location */
+.card__name {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: 4px;
+}
+.card__location {
+  color: var(--clr-green);
+}
+
+/* Button */
+.card__btn {
+  display: grid;
+  gap: 16px;
+}
+.card__btn button {
+  background-color: var(--clr-grey-700);
+  color: var(--clr-White);
+  border-radius: 8px;
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  height: 45px;
+  padding: 0.75rem;
+  transition: 300ms ease-in-out;
+}
+.card__btn button:hover {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+}
+.card__btn button:focus {
+  outline: 1px solid var(--clr-green);
+  color: var(--clr-green);
+}
+
+/* Media queries */
 @media screen and (min-width: 400px) {
   .card {
     padding: 2.5rem;
