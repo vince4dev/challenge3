@@ -90,7 +90,6 @@ ol[role="list"] {
 
 /* GENERAL --------------------------------------- */
 body {
-  background-color: var(--clr-grey-900);
   font-family: var(--ff-base);
   font-size: var(--fs-14);
   font-weight: var(--fw-regular);
@@ -99,8 +98,17 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: auto;
+}
+
+.container {
+  width: min(calc(100%), calc(1440 / 16 * 1rem));
+  background-color: var(--clr-grey-900);
   height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -159,7 +167,7 @@ body {
 }
 
 /* Media queries */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 375px) {
   .card {
     padding: 2.5rem;
     width: calc(384 / 16 * 1rem);
