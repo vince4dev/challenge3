@@ -53,7 +53,7 @@ This project involved creating a web page simulating a map containing social med
 - For the arrangement of elements on the page, I chose to use Grid CSS technology. This technique allows for flexible and responsive arrangement of elements, which is essential to ensure that the page is readable on different devices.
 
 ```css
-.card__btn {
+.card__link {
   display: grid;
   gap: 16px;
 }
@@ -61,20 +61,20 @@ This project involved creating a web page simulating a map containing social med
 
 ### Using Transition, hover (:hover) and focus (:focus)
 
-- To bring the buttons to life, I used the transition,:hover and :focus properties. These three techniques allow you to create animations and visual effects that improve the user experience.
+- To bring the links (<a>) to life, I used the transition,:hover and :focus properties. These three techniques allow you to create animations and visual effects that improve the user experience.
 
 ```css
-button {
+.card__link a {
   ...
   transition: 300ms ease-in-out;
 }
 
-button:hover {
+.card__link a:hover {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
 }
 
-button:focus {
+.card__link a:focus {
   outline: 1px solid var(--clr-green);
   color: var(--clr-green);
 }
