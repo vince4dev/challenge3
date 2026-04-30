@@ -106,7 +106,7 @@ body {
 .card {
   background-color: var(--clr-grey-800);
   padding: 1.5rem;
-  width: 327px;
+  width: calc(327 / 16 * 1rem);
   border-radius: 12px;
   text-align: center;
 
@@ -162,6 +162,6 @@ body {
 @media screen and (min-width: 400px) {
   .card {
     padding: 2.5rem;
-    width: 384px;
+    width: calc(384 / 16 * 1rem);
   }
 }
