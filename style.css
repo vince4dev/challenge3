@@ -1,10 +1,11 @@
+/* FONTS --------------------------------------- */
 /* inter-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-600 - latin */
 @font-face {
@@ -12,7 +13,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* inter-700 - latin */
 @font-face {
@@ -20,34 +21,150 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* VARIABLES --------------------------------------- */
 :root {
   /* Colors */
-  --c-green: hsl(75, 94%, 57%);
-  --c-White: hsl(0, 0%, 100%);
-  --c-grey-700: hsl(0, 0%, 20%);
-  --c-grey-800: hsl(0, 0%, 12%);
-  --c-grey-900: hsl(0, 0%, 8%);
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
 
   /* Fonts */
-  --fs-14: calc(14 / 16 * 1rem);
-  --fs-24: calc(24 / 16 * 1rem);
+  --fs-14: 0.875rem;
+  --fs-24: 1.5rem;
 
   --fw-regular: 400;
-  --fw-600: 600;
-  --fw-700: 700;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --ff-base: "Inter", sans-serif;
 }
 
+/* RESET --------------------------------------- */
+/* Box sizing rules */
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
-* {
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   margin: 0;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERAL --------------------------------------- */
 body {
+  background-color: var(--clr-grey-900);
+  font-family: var(--ff-base);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
+  color: var(--clr-White);
+  line-height: 1.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--clr-grey-800);
+  padding: 1.5rem;
+  width: 327px;
+  border-radius: 12px;
+  text-align: center;
+
+  display: grid;
+  gap: 1.5rem;
+
+  .avatar {
+    justify-self: center;
+    width: 5.5rem;
+    height: 5.5rem;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  .card__user {
+    .card__name {
+      font-size: var(--fs-24);
+      font-weight: var(--fw-semi-bold);
+      margin-bottom: 4px;
+    }
+
+    .card__location {
+      color: var(--clr-green);
+    }
+  }
+
+  .card__btn {
+    display: grid;
+    gap: 16px;
+
+    button {
+      background-color: var(--clr-grey-700);
+      color: var(--clr-White);
+      border-radius: 8px;
+      font-size: inherit;
+      font-weight: var(--fw-bold);
+      height: 45px;
+      padding: 0.75rem;
+      transition: 300ms ease-in-out;
+    }
+
+    button:hover {
+      background-color: var(--clr-green);
+      color: var(--clr-grey-700);
+    }
+
+    button:focus {
+      outline: 1px solid var(--clr-green);
+      color: var(--clr-green);
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .card {
+    padding: 2.5rem;
+    width: 384px;
+  }
 }
