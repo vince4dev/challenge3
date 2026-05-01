@@ -55,7 +55,7 @@ This project involved creating a web page simulating a map containing social med
 ```css
 .card__link {
   display: grid;
-  gap: 16px;
+  gap: 1rem;
 }
 ```
 
