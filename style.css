@@ -108,7 +108,7 @@ body {
 }
 
 .container {
-  width: min(calc(100%), calc(1440 / 16 * 1rem));
+  width: min(100%, calc(1440 / 16 * 1rem));
   background-color: var(--clr-grey-900);
   min-height: 100vh;
 
