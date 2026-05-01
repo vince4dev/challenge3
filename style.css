@@ -83,7 +83,6 @@ dd {
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease-in-out;
 }
 
 /* Remove list styles on ul, ol elements */
@@ -173,6 +172,7 @@ body {
 }
 
 .card__link li > a:focus-visible {
+  outline: 2px solid var(--clr-white);
   outline-offset: 2px;
 }
 
