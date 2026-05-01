@@ -93,6 +93,11 @@ ol[role="list"] {
   padding: 0;
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+}
+
 /* GENERAL --------------------------------------- */
 body {
   background-color: var(--clr-grey-800);
@@ -172,8 +177,8 @@ body {
 }
 
 .card__link li > a:focus-visible {
-  outline: 2px solid var(--clr-white);
-  outline-offset: 2px;
+  outline: 3px solid var(--clr-white);
+  outline-offset: 3px;
 }
 
 /* Media queries */
