@@ -69,14 +69,10 @@ This project involved creating a web page simulating a map containing social med
   transition: 300ms ease-in-out;
 }
 
-.card__link a:hover {
+.card__link a:hover,
+.card__link a:focus-visible {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
-}
-
-.card__link a:focus {
-  outline: 1px solid var(--clr-green);
-  color: var(--clr-green);
 }
 ```
 
