@@ -168,7 +168,7 @@ body {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
 }
-.card__link a:focus {
+.card__link a:focus-visible {
   outline: 1px solid var(--clr-green);
   color: var(--clr-green);
 }
