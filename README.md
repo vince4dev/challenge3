@@ -61,16 +61,16 @@ This project involved creating a web page simulating a map containing social med
 
 ### Using Transition, hover (:hover) and focus (:focus)
 
-- To bring the links (<a>) to life, I used the transition,:hover and :focus properties. These three techniques allow you to create animations and visual effects that improve the user experience.
+- To bring the links (<li> <a>) to life, I used the transition,:hover and :focus-visible properties. These three techniques allow you to create animations and visual effects that improve the user experience.
 
 ```css
-.card__link a {
+.card__link li > a {
   ...
   transition: 300ms ease-in-out;
 }
 
-.card__link a:hover,
-.card__link a:focus-visible {
+.card__link li > a:hover,
+.card__link li > a:focus-visible {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
 }

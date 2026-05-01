@@ -154,20 +154,26 @@ body {
   display: grid;
   gap: 1rem;
 }
-.card__link a {
+.card__link li > a {
   background-color: var(--clr-grey-700);
   color: var(--clr-white);
   border-radius: 0.5rem;
-  font-size: inherit;
   font-weight: var(--fw-bold);
   min-height: 2.8125rem;
   padding: 0.75rem;
+  cursor: pointer;
+  display: block;
   transition: 300ms ease-in-out;
 }
-.card__link a:hover,
-.card__link a:focus-visible {
+
+.card__link li > a:hover,
+.card__link li > a:focus-visible {
   background-color: var(--clr-green);
   color: var(--clr-grey-700);
+}
+
+.card__link li > a:focus-visible {
+  outline-offset: 2px;
 }
 
 /* Media queries */
